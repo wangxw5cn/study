@@ -20,7 +20,7 @@ if (__name__ == "__main__"):
 with open("json_test.json", "w") as f:
     json.dump(dic0, f, indent=8)
 
-with open("csv_test.csv", "w", newline="") as f:
+with open("csv_test.csv", "w", encoding="UTF-8", newline="") as f:
     write_steam = csv.DictWriter(f, fieldnames=["key1", "键名2", "3", "time"])
     write_steam.writeheader()
     write_steam.writerow(dic0)
